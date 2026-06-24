@@ -1,0 +1,25 @@
+{
+  "name": "@snapkitty/sacm-optimizer",
+  "version": "0.1.0",
+  "description": "SACM Optimizer — WORM-causal consensus layer with real per-agent validators.",
+  "type": "module",
+  "main": "dist/src/index.js",
+  "types": "dist/src/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/tests/*.test.js"
+  },
+  "keywords": [
+    "sacm",
+    "optimizer",
+    "consensus",
+    "worm",
+    "snapkitty"
+  ],
+  "author": "SnapKitty Collective",
+  "license": "BSD-2-Clause",
+  "devDependencies": {
+    "@types/node": "^20.19.41",
+    "typescript": "^5.7.2"
+  }
+}

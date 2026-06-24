@@ -55,6 +55,10 @@ No round-trips. No coordinator failure mode. The chain is the protocol.
 ## Quick Start
 
 ```bash
+# Run locally
+npm install
+npm test
+
 # Run consensus on a bridged project
 # Requires: sacmId from Bridge step + authentication
 curl -X POST https://collectivekitty.com/api/gateway/optimizer \
@@ -97,6 +101,17 @@ Full case study: [QUANTUM_EFFECT_CASE_STUDY.md](https://github.com/SNAPKITTY-COL
 Full implementation: [SNAPKITTYWEST/DEVFLOW-FINANCE](https://github.com/SNAPKITTYWEST/DEVFLOW-FINANCE)
 Core library: `collectivekitty/lib/magma/optimizer.ts`
 API endpoint: `collectivekitty/pages/api/gateway/optimizer.ts`
+
+This standalone repo now also ships a runnable TypeScript reference engine:
+
+```text
+src/index.ts              ORACLE/SENTINEL/CIPHER/AXIOM/MNEMEX validators
+tests/optimizer.test.ts   Quorum, rejection, and proof verification tests
+```
+
+Unlike the first stub, the validators do not blindly approve. SENTINEL rejects
+credential-like fields, CIPHER binds payload digest evidence, AXIOM flags vendor
+lock metadata, and MNEMEX verifies causal anchor shape.
 
 ---
 
